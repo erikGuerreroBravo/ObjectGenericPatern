@@ -22,20 +22,58 @@ public class frmLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        pnlTitulo = new javax.swing.JPanel();
+        etTitulo = new javax.swing.JLabel();
+        pnlAccion = new javax.swing.JPanel();
+        etNombreUsuario = new javax.swing.JLabel();
+        etPassword = new javax.swing.JLabel();
+        txtNombreUsuario = new javax.swing.JTextField();
+        txtPassword = new javax.swing.JPasswordField();
+        BtnLogin = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
+        getContentPane().setLayout(null);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        pnlTitulo.setBackground(new java.awt.Color(255, 255, 255));
+        pnlTitulo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pnlTitulo.setLayout(null);
 
-        pack();
+        etTitulo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        etTitulo.setForeground(new java.awt.Color(0, 153, 204));
+        etTitulo.setText("Bienvenidos, Sistema de Acceso a Usuarios");
+        pnlTitulo.add(etTitulo);
+        etTitulo.setBounds(60, 20, 300, 30);
+
+        getContentPane().add(pnlTitulo);
+        pnlTitulo.setBounds(0, 0, 432, 60);
+
+        pnlAccion.setBackground(new java.awt.Color(204, 204, 255));
+        pnlAccion.setLayout(null);
+
+        etNombreUsuario.setText("Nombre de Usuario:");
+        pnlAccion.add(etNombreUsuario);
+        etNombreUsuario.setBounds(40, 30, 120, 20);
+
+        etPassword.setText("Password:");
+        pnlAccion.add(etPassword);
+        etPassword.setBounds(40, 60, 100, 30);
+        pnlAccion.add(txtNombreUsuario);
+        txtNombreUsuario.setBounds(170, 30, 240, 20);
+        pnlAccion.add(txtPassword);
+        txtPassword.setBounds(170, 60, 240, 20);
+
+        BtnLogin.setBackground(new java.awt.Color(255, 255, 255));
+        BtnLogin.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        BtnLogin.setForeground(new java.awt.Color(0, 153, 204));
+        BtnLogin.setText("Login");
+        pnlAccion.add(BtnLogin);
+        BtnLogin.setBounds(340, 90, 73, 23);
+
+        getContentPane().add(pnlAccion);
+        pnlAccion.setBounds(0, 60, 430, 140);
+
+        setBounds(0, 0, 448, 239);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -49,7 +87,7 @@ public class frmLogin extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -74,5 +112,13 @@ public class frmLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnLogin;
+    private javax.swing.JLabel etNombreUsuario;
+    private javax.swing.JLabel etPassword;
+    private javax.swing.JLabel etTitulo;
+    private javax.swing.JPanel pnlAccion;
+    private javax.swing.JPanel pnlTitulo;
+    private javax.swing.JTextField txtNombreUsuario;
+    private javax.swing.JPasswordField txtPassword;
     // End of variables declaration//GEN-END:variables
 }
